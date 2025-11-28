@@ -28,8 +28,8 @@ node {
         }
     }
     
-    stage('Trigger ManifestUpdate') {
-                echo "triggering updatemanifestjob"
-                build job: 'updatemanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+    stage('Trigger Python-project') {
+                echo "triggering python-project"
+                build job: 'python-project', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
         }
 }
